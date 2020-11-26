@@ -12,7 +12,7 @@ those endpoints.
 An example patch file containing the modifications for the default (Torvalds)
 Linux 5.7.5 kernel can be found [here](./patch).
 
-The code for Linux 5.7.5 can be downloaded from [here](wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.7.5.tar.xz).
+The code for Linux 5.7.5 can be downloaded from [here](https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.7.5.tar.xz).
 
 And the modified and pre-compiled kernel for Ubuntu 20.10 can be found in this
 repository here: [linux-image](./linux-image-5.7.5_5.7.5-1_amd64.deb) and
