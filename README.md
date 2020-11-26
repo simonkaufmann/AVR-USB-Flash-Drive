@@ -17,8 +17,8 @@ and later copied to the EEPROM for permanent storage as soon as there is time.
 
 <img src="doc/flash_drive_front.jpg" width="50%">
 <img src="doc/flash_drive_back.jpg" width="50%">
-<img src="doc/screenshots/screen1.jpg" width="70%">
-<img src="doc/screenshots/screen3.jpg" width="40%">
-<img src="doc/screenshots/screen2.jpg" width="70%">
+<img src="doc/screenshots/screen1.PNG" width="70%">
+<img src="doc/screenshots/screen3.PNG" width="40%">
+<img src="doc/screenshots/screen2.PNG" width="70%">
 
 ### Thanks to a very good friend for helping with creating the hardware!
