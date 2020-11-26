@@ -1,0 +1,35 @@
+diff -ur linux-5.7.5/drivers/usb/core/config.c linux-5.7.5-new/drivers/usb/core/config.c
+--- linux-5.7.5/drivers/usb/core/config.c	2020-06-22 08:33:13.000000000 +0100
++++ linux-5.7.5-new/drivers/usb/core/config.c	2020-11-25 18:12:53.584533975 +0000
+@@ -392,12 +392,12 @@
+ 	 */
+ 	if (udev->speed == USB_SPEED_LOW && usb_endpoint_xfer_bulk(d)) {
+ 		dev_warn(ddev, "config %d interface %d altsetting %d "
+-		    "endpoint 0x%X is Bulk; changing to Interrupt\n",
++		    "endpoint 0x%X is Bulk; NOT changing to Interrupt\n",
+ 		    cfgno, inum, asnum, d->bEndpointAddress);
+-		endpoint->desc.bmAttributes = USB_ENDPOINT_XFER_INT;
+-		endpoint->desc.bInterval = 1;
+-		if (usb_endpoint_maxp(&endpoint->desc) > 8)
+-			endpoint->desc.wMaxPacketSize = cpu_to_le16(8);
++//		endpoint->desc.bmAttributes = USB_ENDPOINT_XFER_INT;
++//		endpoint->desc.bInterval = 1;
++//		if (usb_endpoint_maxp(&endpoint->desc) > 8)
++//			endpoint->desc.wMaxPacketSize = cpu_to_le16(8);
+ 	}
+ 
+ 	/*
+@@ -439,10 +439,10 @@
+ 	j = maxpacket_maxes[usb_endpoint_type(&endpoint->desc)];
+ 
+ 	if (maxp > j) {
+-		dev_warn(ddev, "config %d interface %d altsetting %d endpoint 0x%X has invalid maxpacket %d, setting to %d\n",
++		dev_warn(ddev, "config %d interface %d altsetting %d endpoint 0x%X has invalid maxpacket %d, NOT setting to %d\n",
+ 		    cfgno, inum, asnum, d->bEndpointAddress, maxp, j);
+-		maxp = j;
+-		endpoint->desc.wMaxPacketSize = cpu_to_le16(i | maxp);
++//		maxp = j;
++//		endpoint->desc.wMaxPacketSize = cpu_to_le16(i | maxp);
+ 	}
+ 
+ 	/*
